@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coming Soon | Ocean27 Hotel</title>
+  <meta name="description" content="Ocean27 Hotel's new website is coming soon. Book your stay today on Booking.com, Expedia, or Agoda." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    html, body { overflow-x: hidden; max-width: 100%; }
+
+    /* ---------- Hero ---------- */
+    .cs-hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: #0c1c2c;
+    }
+    .cs-hero-media {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      animation: csKenBurns 24s ease-in-out infinite alternate;
+      will-change: transform;
+    }
+    @keyframes csKenBurns {
+      0%   { transform: scale(1) translate(0, 0); }
+      100% { transform: scale(1.12) translate(-1.5%, -1.5%); }
+    }
+    .cs-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(8,16,28,0.55) 0%, rgba(8,16,28,0.45) 35%, rgba(8,16,28,0.75) 75%, rgba(8,16,28,0.94) 100%);
+    }
+
+    /* ---------- Animated background blobs ---------- */
+    .cs-blobs {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      z-index: 1;
+      pointer-events: none;
+    }
+    .cs-blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(60px);
+      opacity: 0.45;
+      mix-blend-mode: screen;
+    }
+    .cs-blob-gold {
+      width: 480px;
+      height: 480px;
+      background: radial-gradient(circle, rgba(232,168,56,0.55), transparent 70%);
+      top: -120px;
+      left: -100px;
+      animation: csDriftA 26s ease-in-out infinite alternate;
+    }
+    .cs-blob-blue {
+      width: 560px;
+      height: 560px;
+      background: radial-gradient(circle, rgba(64,140,200,0.5), transparent 70%);
+      bottom: -160px;
+      right: -120px;
+      animation: csDriftB 30s ease-in-out infinite alternate;
+    }
+    .cs-blob-soft {
+      width: 360px;
+      height: 360px;
+      background: radial-gradient(circle, rgba(255,255,255,0.25), transparent 70%);
+      top: 35%;
+      left: 55%;
+      animation: csDriftC 22s ease-in-out infinite alternate;
+    }
+    @keyframes csDriftA {
+      0%   { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(80px, 60px) scale(1.15); }
+    }
+    @keyframes csDriftB {
+      0%   { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(-70px, -50px) scale(1.1); }
+    }
+    @keyframes csDriftC {
+      0%   { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(-60px, 40px) scale(1.2); }
+    }
+
+    /* ---------- Floating particles ---------- */
+    .cs-particles {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .cs-particle {
+      position: absolute;
+      bottom: -20px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.55);
+      box-shadow: 0 0 6px 1px rgba(255,255,255,0.4);
+      animation: csFloatUp linear infinite;
+    }
+    @keyframes csFloatUp {
+      0% { transform: translateY(0) translateX(0); opacity: 0; }
+      8% { opacity: 0.8; }
+      90% { opacity: 0.5; }
+      100% { transform: translateY(-110vh) translateX(20px); opacity: 0; }
+    }
+
+    /* ---------- Flowing water waves ---------- */
+    .cs-waves {
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      height: 90px;
+      z-index: 3;
+      overflow: hidden;
+      pointer-events: none;
+      mix-blend-mode: soft-light;
+    }
+    .cs-wave-track {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 200%;
+      height: 100%;
+      display: flex;
+      will-change: transform;
+    }
+    .cs-wave-track svg {
+      width: 50%;
+      height: 100%;
+      flex-shrink: 0;
+      display: block;
+    }
+    .cs-wave-back {
+      opacity: 0.3;
+      animation: csWaveScrollSlow 26s linear infinite;
+    }
+    .cs-wave-mid {
+      opacity: 0.35;
+      animation: csWaveScroll 17s linear infinite reverse;
+    }
+    .cs-wave-front {
+      opacity: 0.45;
+      animation: csWaveScrollSlow 11s linear infinite;
+    }
+    @keyframes csWaveScroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    @keyframes csWaveScrollSlow {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    body.cs-paused .cs-wave-track { animation-play-state: paused !important; }
+    @media (prefers-reduced-motion: reduce) {
+      .cs-wave-track { animation: none !important; }
+    }
+    @media (max-width: 640px) {
+      .cs-waves { height: 90px; }
+    }
+
+    /* ---------- Glow pulse (Dribbble-style breathing light) ---------- */
+    .cs-glow {
+      position: absolute;
+      top: 28%;
+      left: 50%;
+      width: 760px;
+      height: 760px;
+      transform: translate(-50%, -50%) scale(1);
+      background: radial-gradient(circle, rgba(255, 198, 120, 0.4), transparent 62%);
+      filter: blur(50px);
+      z-index: 1;
+      pointer-events: none;
+      animation: csGlowPulse 9s ease-in-out infinite;
+      will-change: transform, opacity;
+    }
+    @keyframes csGlowPulse {
+      0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.55; }
+      50%      { transform: translate(-50%, -50%) scale(1.18); opacity: 0.9; }
+    }
+
+    body.cs-paused .cs-hero-media,
+    body.cs-paused .cs-blob,
+    body.cs-paused .cs-particle,
+    body.cs-paused .cs-glow {
+      animation-play-state: paused !important;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .cs-hero-media, .cs-blob, .cs-particle, .cs-glow { animation: none !important; }
+    }
+
+    @media (max-width: 640px) {
+      .cs-blob { filter: blur(36px); }
+      .cs-blob-soft { display: none; }
+      .cs-glow { width: 480px; height: 480px; filter: blur(34px); }
+    }
+
+    /* ---------- Top bar ---------- */
+    .cs-topbar {
+      position: relative;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 28px 5vw;
+    }
+    .cs-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .cs-brand-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.15);
+      flex-shrink: 0;
+    }
+    .cs-brand-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 600;
+      color: #fff;
+      letter-spacing: 0.02em;
+      line-height: 1.1;
+    }
+    .cs-brand-tagline {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+      font-weight: 600;
+    }
+    .cs-topbar-contact {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+    .cs-topbar-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255,255,255,0.92);
+      font-size: 16px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .cs-topbar-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.22);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+
+    /* ---------- Hero center content ---------- */
+    .cs-hero-main {
+      position: relative;
+      z-index: 10;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 24px;
+      gap: 28px;
+    }
+    .cs-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: #fff;
+      padding: 11px 24px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      backdrop-filter: blur(8px);
+    }
+    .cs-headline {
+      font-family: 'Playfair Display', serif;
+      color: #fff;
+      font-weight: 700;
+      line-height: 1.08;
+      font-size: clamp(40px, 6vw, 84px);
+      max-width: 1000px;
+      text-shadow: 0 4px 30px rgba(0,0,0,0.3);
+    }
+    .cs-headline em {
+      font-style: italic;
+      color: var(--gold);
+    }
+    .cs-subline {
+      color: rgba(255,255,255,0.92);
+      font-size: clamp(18px, 1.6vw, 24px);
+      font-weight: 500;
+      max-width: 720px;
+    }
+    .cs-desc {
+      color: rgba(255,255,255,0.7);
+      font-size: clamp(16px, 1.3vw, 19px);
+      max-width: 640px;
+      line-height: 1.7;
+    }
+
+    .cs-channels {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 18px;
+      margin-top: 8px;
+    }
+    .cs-channel-btn {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: rgba(255,255,255,0.97);
+      color: var(--dark);
+      padding: 18px 30px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 18px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.28);
+    }
+    .cs-channel-btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.32);
+    }
+    .cs-channel-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      color: #fff;
+      flex-shrink: 0;
+    }
+    .icon-bdc { background: linear-gradient(135deg, #003580, #0057b8); }
+    .icon-expedia { background: linear-gradient(135deg, #ffc72c, #ffae00); color: #00355f; }
+    .icon-agoda { background: linear-gradient(135deg, #5a1f88, #7b2fb3); }
+    .cs-channel-arrow {
+      font-size: 12px;
+      color: #9aa3ad;
+      margin-left: 2px;
+    }
+
+    .cs-scroll-cue {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.6);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding-bottom: 28px;
+    }
+    .cs-scroll-cue i { animation: csBounce 2s ease-in-out infinite; }
+    @keyframes csBounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(6px); }
+    }
+
+    /* ---------- Gallery ---------- */
+    .cs-gallery {
+      padding: 120px 24px;
+      background: var(--sand);
+    }
+    .cs-photo {
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.16);
+    }
+    .cs-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .cs-photo:hover img { transform: scale(1.05); }
+
+    /* ---------- Footer ---------- */
+    .cs-footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .cs-footer-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.15);
+    }
+
+    @media (max-width: 768px) {
+      .cs-topbar { flex-direction: column; gap: 18px; padding: 24px 6vw; }
+      .cs-topbar-contact { flex-direction: column; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="cs-hero">
+    <img
+      src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600"
+      srcset="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800 800w,
+              https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600 1600w,
+              https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=2400 2400w"
+      sizes="100vw"
+      alt="Ocean27 Hotel oceanfront view in Virginia Beach"
+      class="cs-hero-media"
+      width="1600"
+      height="950"
+      fetchpriority="high"
+      decoding="async"
+    />
+    <div class="cs-hero-overlay"></div>
+    <div class="cs-glow" aria-hidden="true"></div>
+
+    <div class="cs-blobs" aria-hidden="true">
+      <span class="cs-blob cs-blob-gold"></span>
+      <span class="cs-blob cs-blob-blue"></span>
+      <span class="cs-blob cs-blob-soft"></span>
+    </div>
+    <div class="cs-particles" id="csParticles" aria-hidden="true"></div>
+
+    <!-- Top bar: brand left, contact right -->
+    <div class="cs-topbar">
+      <div class="cs-brand">
+        <img src="images/logo-icon.png" alt="Ocean27 Hotel" class="cs-brand-icon" />
+        <div>
+          <div class="cs-brand-name">Ocean27 Hotel</div>
+          <div class="cs-brand-tagline">Premium Coastal Brand</div>
+        </div>
+      </div>
+      <div class="cs-topbar-contact">
+        <a href="tel:+17574283970" class="cs-topbar-item">
+          <span class="cs-topbar-icon"><i class="fa-solid fa-phone"></i></span>
+          1-757-428-3970
+        </a>
+        <a href="mailto:Ocean27virginiabeach@gmail.com" class="cs-topbar-item">
+          <span class="cs-topbar-icon"><i class="fa-solid fa-envelope"></i></span>
+          Ocean27virginiabeach@gmail.com
+        </a>
+      </div>
+    </div>
+
+    <!-- Center content -->
+    <div class="cs-hero-main" data-aos="fade-up">
+      <span class="cs-badge"><i class="fa-regular fa-clock"></i> A New Chapter Is Almost Here</span>
+
+      <h1 class="cs-headline">Something <em>Beautiful</em><br />Is Coming to the Shore</h1>
+
+      <p class="cs-subline">Ocean27 Hotel &middot; 2707 Atlantic Ave, Virginia Beach, VA 23451</p>
+
+      <p class="cs-desc">
+        We're crafting an all-new online home for unforgettable oceanfront stays. While we finish building it,
+        reserve your room today through any of our trusted booking partners below.
+      </p>
+
+      <div class="cs-channels">
+        <a href="https://www.booking.com/hotel/us/econo-lodge-on-the-ocean.html" target="_blank" rel="noopener noreferrer" class="cs-channel-btn">
+          <span class="cs-channel-icon icon-bdc"><i class="fa-solid fa-building"></i></span>
+          Book on Booking.com
+          <i class="fa-solid fa-arrow-up-right-from-square cs-channel-arrow"></i>
+        </a>
+        <a href="https://www.expedia.ca/Virginia-Beach-Hotels-Econo-Lodge-Virginia-Beach-On-The-Ocean.h14028.Hotel-Information" target="_blank" rel="noopener noreferrer" class="cs-channel-btn">
+          <span class="cs-channel-icon icon-expedia"><i class="fa-solid fa-plane"></i></span>
+          Book on Expedia
+          <i class="fa-solid fa-arrow-up-right-from-square cs-channel-arrow"></i>
+        </a>
+        <a href="https://www.agoda.com/en-ca/econo-lodge-virginia-beach-on-the-ocean_2/hotel/virginia-beach-va-us.html" target="_blank" rel="noopener noreferrer" class="cs-channel-btn">
+          <span class="cs-channel-icon icon-agoda"><i class="fa-solid fa-bed"></i></span>
+          Book on Agoda
+          <i class="fa-solid fa-arrow-up-right-from-square cs-channel-arrow"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="cs-scroll-cue">
+      Take a Peek Inside
+      <i class="fa-solid fa-chevron-down"></i>
+    </div>
+
+    <!-- Flowing water effect -->
+    <div class="cs-waves" aria-hidden="true">
+      <div class="cs-wave-track cs-wave-back">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,70 C150,90 350,55 600,68 C850,82 1050,58 1200,72 L1200,120 L0,120 Z" fill="#ffffff"></path></svg>
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,70 C150,90 350,55 600,68 C850,82 1050,58 1200,72 L1200,120 L0,120 Z" fill="#ffffff"></path></svg>
+      </div>
+      <div class="cs-wave-track cs-wave-mid">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,75 C200,58 400,88 600,72 C800,60 1000,86 1200,68 L1200,120 L0,120 Z" fill="#ffffff"></path></svg>
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,75 C200,58 400,88 600,72 C800,60 1000,86 1200,68 L1200,120 L0,120 Z" fill="#ffffff"></path></svg>
+      </div>
+      <div class="cs-wave-track cs-wave-front">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,80 C180,68 420,92 600,78 C780,65 1020,88 1200,74 L1200,120 L0,120 Z" fill="#ffffff"></path></svg>
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,80 C180,68 420,92 600,78 C780,65 1020,88 1200,74 L1200,120 L0,120 Z" fill="#ffffff"></path></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== GALLERY ===================== -->
+  <section class="cs-gallery">
+    <div class="max-w-5xl mx-auto text-center mb-16" data-aos="fade-up">
+      <h2 class="font-display text-4xl md:text-5xl text-[var(--blue)] mb-5">A Sneak Peek of Your Stay</h2>
+      <p class="text-gray-600 text-xl max-w-2xl mx-auto">Oceanfront comfort and a private poolside escape, just steps from the sand.</p>
+    </div>
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div class="cs-photo aspect-[4/3]" data-aos="fade-up">
+        <img src="images/room.jpg" alt="Ocean27 Hotel oceanfront room" />
+      </div>
+      <div class="cs-photo aspect-[4/3]" data-aos="fade-up" data-aos-delay="100">
+        <img src="images/pool.jpg" alt="Ocean27 Hotel poolside area" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="max-w-[1600px] mx-auto px-6 py-14 flex flex-col items-center text-center gap-4">
+      <div class="cs-footer-brand">
+        <img src="images/logo-icon.png" alt="Ocean27 Hotel" class="cs-footer-icon" />
+        <span class="font-display text-xl text-white">Ocean27 Hotel</span>
+      </div>
+      <p class="text-lg text-white/80">
+        <i class="fa-solid fa-phone mr-2"></i>1-757-428-3970
+        <span class="mx-3 text-white/30">|</span>
+        <i class="fa-solid fa-envelope mr-2"></i>Ocean27virginiabeach@gmail.com
+      </p>
+      <p class="text-sm text-white/50 mt-2">© <span class="copyright-year">2026</span> Ocean27 Hotel &middot; All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    if (window.AOS) AOS.init({ duration: 800, once: true, easing: "ease-out-cubic" });
+    document.querySelectorAll(".copyright-year").forEach((el) => { el.textContent = new Date().getFullYear(); });
+
+    // ---------- Floating particles (fewer on small/low-power screens) ----------
+    const particleField = document.getElementById("csParticles");
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (particleField && !prefersReducedMotion) {
+      const count = window.innerWidth < 640 ? 10 : window.innerWidth < 1024 ? 16 : 22;
+      for (let i = 0; i < count; i++) {
+        const p = document.createElement("span");
+        p.className = "cs-particle";
+        p.style.left = `${Math.random() * 100}%`;
+        p.style.width = p.style.height = `${3 + Math.random() * 4}px`;
+        p.style.animationDuration = `${14 + Math.random() * 12}s`;
+        p.style.animationDelay = `${Math.random() * 14}s`;
+        particleField.appendChild(p);
+      }
+    }
+
+    // ---------- Pause decorative animations when tab is hidden (saves battery/CPU) ----------
+    document.addEventListener("visibilitychange", () => {
+      document.body.classList.toggle("cs-paused", document.hidden);
+    });
+  </script>
+</body>
+</html>

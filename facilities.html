@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Facilities | Ocean27 Hotel</title>
+  <meta name="description" content="Explore Ocean27 Hotel's facilities in Virginia Beach: seasonal pool, free WiFi, parking, pet-friendly rooms, beachfront access and 24-hour front desk." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div id="scrollBg" aria-hidden="true">
+    <span class="scroll-blob blob-gold"></span>
+    <span class="scroll-blob blob-blue"></span>
+  </div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header id="navbar" class="navbar">
+    <div class="max-w-[1600px] mx-auto px-6 flex items-center justify-between">
+      <a href="index.html" class="nav-logo flex items-center gap-2">🌊 Ocean27 Hotel</a>
+
+      <nav class="hidden lg:flex items-center gap-10">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="rooms.html" class="nav-link">Rooms</a>
+        <a href="facilities.html" class="nav-link active">Facilities</a>
+        <a href="house-rules.html" class="nav-link">House Rules</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="hidden lg:flex items-center gap-6">
+        <a href="tel:+17570000000" class="nav-phone text-base font-medium text-[var(--dark)]">
+          <i class="fa-solid fa-phone mr-1"></i> +1 (757) 000-0000 <!-- UPDATE -->
+        </a>
+        <a href="rooms.html" class="btn btn-gold">
+          Book Now <span class="btn-icon"><i class="fa-solid fa-arrow-up-right text-xs"></i></span>
+        </a>
+      </div>
+
+      <button id="hamburger" class="hamburger lg:hidden flex flex-col gap-[5px] p-2" aria-label="Toggle menu">
+        <span class="hamburger-line line-1"></span>
+        <span class="hamburger-line line-2"></span>
+        <span class="hamburger-line line-3"></span>
+      </button>
+    </div>
+
+    <div id="mobileMenu" class="mobile-menu lg:hidden px-6">
+      <nav class="flex flex-col gap-4 py-6 border-t border-black/10 mt-2">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="rooms.html" class="nav-link">Rooms</a>
+        <a href="facilities.html" class="nav-link active">Facilities</a>
+        <a href="house-rules.html" class="nav-link">House Rules</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="tel:+17570000000" class="text-sm font-medium"><i class="fa-solid fa-phone mr-1"></i> +1 (757) 000-0000</a>
+        <a href="rooms.html" class="btn btn-gold justify-center">Book Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== PAGE BANNER ===================== -->
+    <section class="page-banner">
+      <img src="https://picsum.photos/1600/700?random=20" alt="Ocean27 Hotel facilities" />
+      <div class="hero-overlay"></div>
+      <h1 class="relative z-10 font-display text-white text-5xl md:text-7xl text-center px-6">Facilities</h1>
+    </section>
+
+    <!-- ===================== TOP BADGES ===================== -->
+    <section class="pt-16 pb-4">
+      <div class="max-w-6xl mx-auto px-6 flex flex-wrap justify-center gap-3" data-aos="fade-up">
+        <span class="pill"><i class="fa-solid fa-person-swimming"></i> Pool (Seasonal)</span>
+        <span class="pill"><i class="fa-solid fa-smoking-ban"></i> Non-Smoking</span>
+        <span class="pill"><i class="fa-solid fa-square-parking"></i> Parking</span>
+        <span class="pill"><i class="fa-solid fa-wifi"></i> Free WiFi</span>
+        <span class="pill"><i class="fa-solid fa-umbrella-beach"></i> Beachfront</span>
+        <span class="pill"><i class="fa-solid fa-clock"></i> 24hr Desk</span>
+      </div>
+    </section>
+
+    <!-- ===================== 3-COL DETAIL GRID ===================== -->
+    <section class="section-pad">
+      <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
+
+        <!-- Col 1 -->
+        <div class="bezel" data-aos="fade-up">
+          <div class="bezel-inner p-7">
+            <h2 class="font-display text-xl text-[var(--blue)] mb-5">Great for Your Stay</h2>
+            <ul class="space-y-3 text-base text-gray-600">
+              <li><i class="fa-solid fa-check text-[var(--gold)] mr-2"></i>Parking (private, accessible)</li>
+              <li><i class="fa-solid fa-check text-[var(--gold)] mr-2"></i>Pets allowed</li>
+              <li><i class="fa-solid fa-check text-[var(--gold)] mr-2"></i>Free WiFi</li>
+              <li><i class="fa-solid fa-check text-[var(--gold)] mr-2"></i>Non-smoking rooms</li>
+              <li><i class="fa-solid fa-check text-[var(--gold)] mr-2"></i>Hiking</li>
+              <li><i class="fa-solid fa-check text-[var(--gold)] mr-2"></i>Designated smoking area</li>
+              <li><i class="fa-solid fa-check text-[var(--gold)] mr-2"></i>Beachfront</li>
+              <li><i class="fa-solid fa-check text-[var(--gold)] mr-2"></i>Beach access</li>
+              <li><i class="fa-solid fa-check text-[var(--gold)] mr-2"></i>Accessible parking</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Col 2 -->
+        <div class="bezel" data-aos="fade-up" data-aos-delay="100">
+          <div class="bezel-inner p-7">
+            <h2 class="font-display text-xl text-[var(--blue)] mb-5">Services</h2>
+            <div class="space-y-5 text-base text-gray-600">
+              <div>
+                <p class="font-semibold text-[var(--blue)] mb-1">Activities</p>
+                <p>Cycling, Hiking</p>
+              </div>
+              <div>
+                <p class="font-semibold text-[var(--blue)] mb-1">Internet</p>
+                <p>Free WiFi in all areas</p>
+              </div>
+              <div>
+                <p class="font-semibold text-[var(--blue)] mb-1">Parking</p>
+                <p>On-site, no reservation needed, $14/day, accessible</p>
+              </div>
+              <div>
+                <p class="font-semibold text-[var(--blue)] mb-1">Front Desk Services</p>
+                <p>24hr front desk, invoice provided</p>
+              </div>
+              <div>
+                <p class="font-semibold text-[var(--blue)] mb-1">Safety &amp; Security</p>
+                <p>Fire extinguishers, smoke alarms, key card access, safety deposit box*</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 3 -->
+        <div class="bezel" data-aos="fade-up" data-aos-delay="200">
+          <div class="bezel-inner p-7">
+            <h2 class="font-display text-xl text-[var(--blue)] mb-5">Property</h2>
+            <div class="space-y-5 text-base text-gray-600">
+              <div>
+                <p class="font-semibold text-[var(--blue)] mb-1">Outdoors</p>
+                <p>Outdoor furniture, sun terrace</p>
+              </div>
+              <div>
+                <p class="font-semibold text-[var(--blue)] mb-1">Pets</p>
+                <p>Allowed, charges may apply</p>
+              </div>
+              <div>
+                <p class="font-semibold text-[var(--blue)] mb-1">General</p>
+                <p>AC, heating, non-smoking rooms, designated smoking area</p>
+              </div>
+              <div>
+                <p class="font-semibold text-[var(--blue)] mb-1">Pool</p>
+                <p>Seasonal (temporarily closed), pool/beach towels, sun loungers</p>
+              </div>
+              <div>
+                <p class="font-semibold text-[var(--blue)] mb-1">Beach</p>
+                <p>Beachfront access</p>
+              </div>
+              <div>
+                <p class="font-semibold text-[var(--blue)] mb-1">Languages Spoken</p>
+                <p>English</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <p class="text-base text-gray-400 text-center mt-8">*Subject to availability at front desk.</p>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="max-w-[1600px] mx-auto px-6 py-16 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
+      <div>
+        <p class="font-display text-xl text-white mb-3">🌊 Ocean27 Hotel</p>
+        <p class="text-base text-white/70 leading-relaxed">Your Oceanfront Escape in Virginia Beach</p>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold text-base uppercase tracking-wide mb-4">Quick Links</h4>
+        <ul class="space-y-2 text-base">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="rooms.html">Rooms</a></li>
+          <li><a href="facilities.html">Facilities</a></li>
+          <li><a href="house-rules.html">House Rules</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold text-base uppercase tracking-wide mb-4">Contact</h4>
+        <ul class="space-y-2 text-base">
+          <li>📍 2707 Atlantic Ave, VA 23451</li>
+          <li>📞 +1 (757) 000-0000 <!-- UPDATE --></li>
+          <li>✉️ info@ocean27hotel.com <!-- UPDATE --></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold text-base uppercase tracking-wide mb-4">Stay Info</h4>
+        <ul class="space-y-2 text-base mb-5">
+          <li>Check-in: 16:00</li>
+          <li>Check-out: 11:00</li>
+        </ul>
+        <a href="rooms.html" class="btn btn-gold">Book Now</a>
+      </div>
+    </div>
+
+    <div class="border-t border-white/10">
+      <div class="max-w-[1600px] mx-auto px-6 py-6 flex flex-col items-center text-center gap-2 text-xs text-white/60">
+        <p>© <span class="copyright-year">2026</span> Ocean27 Hotel &middot; All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

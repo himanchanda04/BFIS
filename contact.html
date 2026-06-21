@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact &amp; Reservations | Ocean27 Hotel</title>
+  <meta name="description" content="Contact Ocean27 Hotel in Virginia Beach for reservations and inquiries. Find our address, phone, email and a map to the property." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div id="scrollBg" aria-hidden="true">
+    <span class="scroll-blob blob-gold"></span>
+    <span class="scroll-blob blob-blue"></span>
+  </div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header id="navbar" class="navbar">
+    <div class="max-w-[1600px] mx-auto px-6 flex items-center justify-between">
+      <a href="index.html" class="nav-logo flex items-center gap-2">🌊 Ocean27 Hotel</a>
+
+      <nav class="hidden lg:flex items-center gap-10">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="rooms.html" class="nav-link">Rooms</a>
+        <a href="facilities.html" class="nav-link">Facilities</a>
+        <a href="house-rules.html" class="nav-link">House Rules</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+
+      <div class="hidden lg:flex items-center gap-6">
+        <a href="tel:+17570000000" class="nav-phone text-base font-medium text-[var(--dark)]">
+          <i class="fa-solid fa-phone mr-1"></i> +1 (757) 000-0000 <!-- UPDATE -->
+        </a>
+        <a href="#contact-form" class="btn btn-gold">
+          Book Now <span class="btn-icon"><i class="fa-solid fa-arrow-up-right text-xs"></i></span>
+        </a>
+      </div>
+
+      <button id="hamburger" class="hamburger lg:hidden flex flex-col gap-[5px] p-2" aria-label="Toggle menu">
+        <span class="hamburger-line line-1"></span>
+        <span class="hamburger-line line-2"></span>
+        <span class="hamburger-line line-3"></span>
+      </button>
+    </div>
+
+    <div id="mobileMenu" class="mobile-menu lg:hidden px-6">
+      <nav class="flex flex-col gap-4 py-6 border-t border-black/10 mt-2">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="rooms.html" class="nav-link">Rooms</a>
+        <a href="facilities.html" class="nav-link">Facilities</a>
+        <a href="house-rules.html" class="nav-link">House Rules</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+        <a href="tel:+17570000000" class="text-sm font-medium"><i class="fa-solid fa-phone mr-1"></i> +1 (757) 000-0000</a>
+        <a href="#contact-form" class="btn btn-gold justify-center">Book Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pt-24">
+    <!-- ===================== MAP ===================== -->
+    <section class="px-6 pt-8" data-aos="fade-up">
+      <div class="max-w-[1600px] mx-auto rounded-2xl overflow-hidden">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.123456789!2d-75.9853925!3d36.8478416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s2707+Atlantic+Ave%2C+Virginia+Beach%2C+VA+23451!5e0!3m2!1sen!2sus!4v1234567890"
+          width="100%"
+          height="450"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Ocean27 Hotel location map"
+        ></iframe>
+      </div>
+    </section>
+
+    <!-- ===================== FORM + INFO ===================== -->
+    <section class="section-pad">
+      <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+        <!-- Form -->
+        <div data-aos="fade-up">
+          <h1 class="font-display text-4xl md:text-5xl text-[var(--blue)] mb-6">Send Us a Message</h1>
+
+          <form id="contact-form" class="bezel">
+            <div class="bezel-inner p-7 space-y-5">
+              <div>
+                <label class="field-label" for="name">Name</label>
+                <input class="field-input" type="text" id="name" name="name" required />
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label class="field-label" for="email">Email</label>
+                  <input class="field-input" type="email" id="email" name="email" required />
+                </div>
+                <div>
+                  <label class="field-label" for="phone">Phone</label>
+                  <input class="field-input" type="tel" id="phone" name="phone" />
+                </div>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label class="field-label" for="contact-checkin">Check-in Date</label>
+                  <input class="field-input" type="date" id="contact-checkin" name="checkin" />
+                </div>
+                <div>
+                  <label class="field-label" for="contact-checkout">Check-out Date</label>
+                  <input class="field-input" type="date" id="contact-checkout" name="checkout" />
+                </div>
+              </div>
+              <div>
+                <label class="field-label" for="message">Message</label>
+                <textarea class="field-input" id="message" name="message" rows="4"></textarea>
+              </div>
+              <button type="submit" class="btn btn-gold w-full justify-center">
+                Send <span class="btn-icon"><i class="fa-solid fa-arrow-up-right text-xs"></i></span>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Info card -->
+        <div data-aos="fade-up" data-aos-delay="100">
+          <h2 class="font-display text-4xl md:text-5xl text-[var(--blue)] mb-6">Ocean27 Hotel</h2>
+
+          <div class="bezel">
+            <div class="bezel-inner p-7 space-y-5 text-base text-gray-600">
+              <p><i class="fa-solid fa-location-dot text-[var(--gold)] mr-3 w-4"></i>2707 Atlantic Ave, Virginia Beach, VA 23451</p>
+              <p><i class="fa-solid fa-phone text-[var(--gold)] mr-3 w-4"></i>+1 (757) 000-0000 <!-- UPDATE --></p>
+              <p><i class="fa-solid fa-envelope text-[var(--gold)] mr-3 w-4"></i>info@ocean27hotel.com <!-- UPDATE --></p>
+              <p><i class="fa-regular fa-clock text-[var(--gold)] mr-3 w-4"></i>Check-in 16:00 &middot; Check-out 11:00</p>
+              <p><i class="fa-solid fa-user-shield text-[var(--gold)] mr-3 w-4"></i>Minimum age to check in: 18</p>
+              <p><i class="fa-solid fa-paw text-[var(--gold)] mr-3 w-4"></i>Pets welcome (charges apply)</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="max-w-[1600px] mx-auto px-6 py-16 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
+      <div>
+        <p class="font-display text-xl text-white mb-3">🌊 Ocean27 Hotel</p>
+        <p class="text-base text-white/70 leading-relaxed">Your Oceanfront Escape in Virginia Beach</p>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold text-base uppercase tracking-wide mb-4">Quick Links</h4>
+        <ul class="space-y-2 text-base">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="rooms.html">Rooms</a></li>
+          <li><a href="facilities.html">Facilities</a></li>
+          <li><a href="house-rules.html">House Rules</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold text-base uppercase tracking-wide mb-4">Contact</h4>
+        <ul class="space-y-2 text-base">
+          <li>📍 2707 Atlantic Ave, VA 23451</li>
+          <li>📞 +1 (757) 000-0000 <!-- UPDATE --></li>
+          <li>✉️ info@ocean27hotel.com <!-- UPDATE --></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold text-base uppercase tracking-wide mb-4">Stay Info</h4>
+        <ul class="space-y-2 text-base mb-5">
+          <li>Check-in: 16:00</li>
+          <li>Check-out: 11:00</li>
+        </ul>
+        <a href="#contact-form" class="btn btn-gold">Book Now</a>
+      </div>
+    </div>
+
+    <div class="border-t border-white/10">
+      <div class="max-w-[1600px] mx-auto px-6 py-6 flex flex-col items-center text-center gap-2 text-xs text-white/60">
+        <p>© <span class="copyright-year">2026</span> Ocean27 Hotel &middot; All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById("contact-form").addEventListener("submit", (e) => {
+      e.preventDefault();
+      alert("Thank you! Your message has been received. Our team will reach out shortly.");
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>

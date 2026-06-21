@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rooms &amp; Rates | Ocean27 Hotel</title>
+  <meta name="description" content="Browse Ocean27 Hotel's newly renovated oceanfront rooms in Virginia Beach, including double bed and king oceanfront rooms with private balconies." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div id="scrollBg" aria-hidden="true">
+    <span class="scroll-blob blob-gold"></span>
+    <span class="scroll-blob blob-blue"></span>
+  </div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header id="navbar" class="navbar">
+    <div class="max-w-[1600px] mx-auto px-6 flex items-center justify-between">
+      <a href="index.html" class="nav-logo flex items-center gap-2">🌊 Ocean27 Hotel</a>
+
+      <nav class="hidden lg:flex items-center gap-10">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="rooms.html" class="nav-link active">Rooms</a>
+        <a href="facilities.html" class="nav-link">Facilities</a>
+        <a href="house-rules.html" class="nav-link">House Rules</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="hidden lg:flex items-center gap-6">
+        <a href="tel:+17570000000" class="nav-phone text-base font-medium text-[var(--dark)]">
+          <i class="fa-solid fa-phone mr-1"></i> +1 (757) 000-0000 <!-- UPDATE -->
+        </a>
+        <a href="#room-list" class="btn btn-gold">
+          Book Now <span class="btn-icon"><i class="fa-solid fa-arrow-up-right text-xs"></i></span>
+        </a>
+      </div>
+
+      <button id="hamburger" class="hamburger lg:hidden flex flex-col gap-[5px] p-2" aria-label="Toggle menu">
+        <span class="hamburger-line line-1"></span>
+        <span class="hamburger-line line-2"></span>
+        <span class="hamburger-line line-3"></span>
+      </button>
+    </div>
+
+    <div id="mobileMenu" class="mobile-menu lg:hidden px-6">
+      <nav class="flex flex-col gap-4 py-6 border-t border-black/10 mt-2">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="rooms.html" class="nav-link active">Rooms</a>
+        <a href="facilities.html" class="nav-link">Facilities</a>
+        <a href="house-rules.html" class="nav-link">House Rules</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="tel:+17570000000" class="text-sm font-medium"><i class="fa-solid fa-phone mr-1"></i> +1 (757) 000-0000</a>
+        <a href="#room-list" class="btn btn-gold justify-center">Book Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== PAGE BANNER ===================== -->
+    <section class="page-banner">
+      <img src="https://picsum.photos/1600/700?random=10" alt="Ocean27 Hotel oceanfront rooms" />
+      <div class="hero-overlay"></div>
+      <h1 class="relative z-10 font-display text-white text-5xl md:text-7xl text-center px-6">Our Rooms &amp; Rates</h1>
+    </section>
+
+    <!-- ===================== INTRO ===================== -->
+    <section class="section-pad pb-0">
+      <div class="max-w-3xl mx-auto px-6 text-center" data-aos="fade-up">
+        <p class="text-gray-600 text-lg leading-relaxed">
+          Newly renovated oceanfront rooms with private patios or balconies — perfect for
+          boardwalk views and dolphin sightings.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== ROOM CARDS ===================== -->
+    <section id="room-list" class="section-pad">
+      <div class="max-w-6xl mx-auto px-6 space-y-10">
+
+        <!-- Room 1 -->
+        <div class="bezel" data-aos="fade-up">
+          <div class="bezel-inner flex flex-col md:flex-row">
+            <div class="md:w-2/5">
+              <img src="https://picsum.photos/800/600?random=11" alt="Two Double Beds Oceanfront room" class="w-full h-64 md:h-full object-cover" />
+            </div>
+            <div class="md:w-3/5 p-8">
+              <span class="pill mb-4">Oceanfront &middot; Sleeps 4</span>
+              <h2 class="font-display text-2xl md:text-3xl text-[var(--blue)] mb-2">Two Double Beds Oceanfront</h2>
+              <p class="text-base text-gray-500 mb-5">Private balcony &middot; Oceanfront &middot; Sleeps 4</p>
+
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6 text-gray-500 text-base">
+                <span><i class="fa-solid fa-bed mr-2 text-[var(--gold)]"></i>2 Double Beds</span>
+                <span><i class="fa-solid fa-snowflake mr-2 text-[var(--gold)]"></i>AC</span>
+                <span><i class="fa-solid fa-tv mr-2 text-[var(--gold)]"></i>32" TV</span>
+                <span><i class="fa-solid fa-wifi mr-2 text-[var(--gold)]"></i>Free WiFi</span>
+                <span><i class="fa-solid fa-mug-hot mr-2 text-[var(--gold)]"></i>Coffee Maker</span>
+                <span><i class="fa-solid fa-kitchen-set mr-2 text-[var(--gold)]"></i>Refrigerator</span>
+                <span><i class="fa-solid fa-temperature-three-quarters mr-2 text-[var(--gold)]"></i>Microwave</span>
+                <span><i class="fa-solid fa-shirt mr-2 text-[var(--gold)]"></i>Iron + Board</span>
+              </div>
+
+              <p class="text-base text-gray-400 mb-6">
+                Also includes hair dryer, HBO &amp; Disney Channel, non-smoking rooms available.
+              </p>
+
+              <div class="flex flex-wrap items-center justify-between gap-4">
+                <span class="font-display text-2xl text-[var(--blue)]">From $129<span class="text-base text-gray-400">/night</span></span>
+                <!-- UPDATE: paste Stripe Payment Link URL in data-stripe-link to enable direct online payment -->
+                <a href="contact.html#contact-form" data-stripe-link="" data-room="Two Double Beds Oceanfront" class="btn btn-gold book-now-btn">Book Now <span class="btn-icon"><i class="fa-solid fa-arrow-up-right text-xs"></i></span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Room 2 -->
+        <div class="bezel" data-aos="fade-up" data-aos-delay="100">
+          <div class="bezel-inner flex flex-col md:flex-row">
+            <div class="md:w-2/5">
+              <img src="https://picsum.photos/800/600?random=12" alt="King Oceanfront room" class="w-full h-64 md:h-full object-cover" />
+            </div>
+            <div class="md:w-3/5 p-8">
+              <span class="pill mb-4">Oceanfront &middot; Sleeps 2</span>
+              <h2 class="font-display text-2xl md:text-3xl text-[var(--blue)] mb-2">King Oceanfront Room</h2>
+              <p class="text-base text-gray-500 mb-5">King bed &middot; Private balcony &middot; Ocean view &middot; Sleeps 2</p>
+
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6 text-gray-500 text-base">
+                <span><i class="fa-solid fa-bed mr-2 text-[var(--gold)]"></i>1 King Bed</span>
+                <span><i class="fa-solid fa-snowflake mr-2 text-[var(--gold)]"></i>AC</span>
+                <span><i class="fa-solid fa-tv mr-2 text-[var(--gold)]"></i>32" TV</span>
+                <span><i class="fa-solid fa-wifi mr-2 text-[var(--gold)]"></i>Free WiFi</span>
+                <span><i class="fa-solid fa-mug-hot mr-2 text-[var(--gold)]"></i>Coffee Maker</span>
+                <span><i class="fa-solid fa-kitchen-set mr-2 text-[var(--gold)]"></i>Refrigerator</span>
+                <span><i class="fa-solid fa-temperature-three-quarters mr-2 text-[var(--gold)]"></i>Microwave</span>
+                <span><i class="fa-solid fa-shirt mr-2 text-[var(--gold)]"></i>Iron + Board</span>
+              </div>
+
+              <p class="text-base text-gray-400 mb-6">
+                Also includes hair dryer, HBO &amp; Disney Channel, non-smoking rooms available.
+              </p>
+
+              <div class="flex flex-wrap items-center justify-between gap-4">
+                <span class="font-display text-2xl text-[var(--blue)]">From $149<span class="text-base text-gray-400">/night</span></span>
+                <!-- UPDATE: paste Stripe Payment Link URL in data-stripe-link to enable direct online payment -->
+                <a href="contact.html#contact-form" data-stripe-link="" data-room="King Oceanfront Room" class="btn btn-gold book-now-btn">Book Now <span class="btn-icon"><i class="fa-solid fa-arrow-up-right text-xs"></i></span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="max-w-[1600px] mx-auto px-6 py-16 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
+      <div>
+        <p class="font-display text-xl text-white mb-3">🌊 Ocean27 Hotel</p>
+        <p class="text-base text-white/70 leading-relaxed">Your Oceanfront Escape in Virginia Beach</p>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold text-base uppercase tracking-wide mb-4">Quick Links</h4>
+        <ul class="space-y-2 text-base">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="rooms.html">Rooms</a></li>
+          <li><a href="facilities.html">Facilities</a></li>
+          <li><a href="house-rules.html">House Rules</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold text-base uppercase tracking-wide mb-4">Contact</h4>
+        <ul class="space-y-2 text-base">
+          <li>📍 2707 Atlantic Ave, VA 23451</li>
+          <li>📞 +1 (757) 000-0000 <!-- UPDATE --></li>
+          <li>✉️ info@ocean27hotel.com <!-- UPDATE --></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold text-base uppercase tracking-wide mb-4">Stay Info</h4>
+        <ul class="space-y-2 text-base mb-5">
+          <li>Check-in: 16:00</li>
+          <li>Check-out: 11:00</li>
+        </ul>
+        <a href="#room-list" class="btn btn-gold">Book Now</a>
+      </div>
+    </div>
+
+    <div class="border-t border-white/10">
+      <div class="max-w-[1600px] mx-auto px-6 py-6 flex flex-col items-center text-center gap-2 text-xs text-white/60">
+        <p>© <span class="copyright-year">2026</span> Ocean27 Hotel &middot; All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
