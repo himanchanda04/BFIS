@@ -1,5 +1,8 @@
 {
   "routes": [
+    { "src": "^/(index\\.html)?$", "dest": "/coming-soon.html" },
+    { "src": "^/(rooms|facilities|house-rules|contact)\\.html$", "dest": "/coming-soon.html" },
+    { "handle": "filesystem" },
     { "src": "/.*", "dest": "/coming-soon.html" }
   ]
 }
