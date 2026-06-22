@@ -6,12 +6,61 @@
   <title>Ocean27 Hotel | Oceanfront Hotel in Virginia Beach, VA</title>
   <meta name="description" content="Ocean27 Hotel is a family-owned oceanfront hotel on the Virginia Beach boardwalk. Steps from the sand, modern amenities, and warm hospitality." />
 
+  <link rel="canonical" href="https://bfis-gules.vercel.app/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ocean27 Hotel | Oceanfront Hotel in Virginia Beach, VA" />
+  <meta property="og:description" content="Ocean27 Hotel is a family-owned oceanfront hotel on the Virginia Beach boardwalk. Steps from the sand, modern amenities, and warm hospitality." />
+  <meta property="og:url" content="https://bfis-gules.vercel.app/" />
+  <meta property="og:image" content="https://bfis-gules.vercel.app/images/exterior/exterior-1.jpg" />
+  <meta property="og:site_name" content="Ocean27 Hotel" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ocean27 Hotel | Oceanfront Hotel in Virginia Beach, VA" />
+  <meta name="twitter:description" content="Ocean27 Hotel is a family-owned oceanfront hotel on the Virginia Beach boardwalk. Steps from the sand, modern amenities, and warm hospitality." />
+  <meta name="twitter:image" content="https://bfis-gules.vercel.app/images/exterior/exterior-1.jpg" />
+  <meta name="theme-color" content="#1a3c5e" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=12">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Hotel",
+    "name": "Ocean27 Hotel",
+    "description": "Family-owned oceanfront hotel on the Virginia Beach boardwalk with newly renovated rooms, a seasonal pool, and beachfront access.",
+    "image": "https://bfis-gules.vercel.app/images/exterior/exterior-1.jpg",
+    "url": "https://bfis-gules.vercel.app/",
+    "telephone": "+1-757-428-3970",
+    "email": "Ocean27virginiabeach@gmail.com",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "2707 Atlantic Ave",
+      "addressLocality": "Virginia Beach",
+      "addressRegion": "VA",
+      "postalCode": "23451",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 36.8478,
+      "longitude": -75.9754
+    },
+    "checkinTime": "16:00",
+    "checkoutTime": "11:00",
+    "petsAllowed": true,
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "Free WiFi" },
+      { "@type": "LocationFeatureSpecification", "name": "Seasonal Pool" },
+      { "@type": "LocationFeatureSpecification", "name": "Free Parking" },
+      { "@type": "LocationFeatureSpecification", "name": "Beachfront Access" },
+      { "@type": "LocationFeatureSpecification", "name": "Pet Friendly" }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -23,7 +72,7 @@
   <!-- ===================== NAVBAR ===================== -->
   <header id="navbar" class="navbar">
     <div class="max-w-[1600px] mx-auto px-6 flex items-center justify-between">
-      <a href="index.html" class="nav-logo flex items-center gap-2">🌊 Ocean27 Hotel</a>
+      <a href="index.html" class="nav-logo flex items-center gap-2"><img src="images/logo-icon.png" alt="Ocean27 Hotel logo" class="h-10 w-auto"/> Ocean27 Hotel</a>
 
       <nav class="hidden lg:flex items-center gap-10">
         <a href="index.html" class="nav-link active">Home</a>
@@ -34,8 +83,8 @@
       </nav>
 
       <div class="hidden lg:flex items-center gap-6">
-        <a href="tel:+17570000000" class="nav-phone text-base font-medium text-[var(--dark)]">
-          <i class="fa-solid fa-phone mr-1"></i> +1 (757) 000-0000 <!-- UPDATE -->
+        <a href="tel:+17574283970" class="nav-phone text-lg font-medium text-[var(--dark)]">
+          <i class="fa-solid fa-phone mr-1"></i> +1 (757) 428-3970 <!-- UPDATE -->
         </a>
         <a href="rooms.html" class="btn btn-gold">
           Book Now <span class="btn-icon"><i class="fa-solid fa-arrow-up-right text-xs"></i></span>
@@ -56,7 +105,7 @@
         <a href="facilities.html" class="nav-link">Facilities</a>
         <a href="house-rules.html" class="nav-link">House Rules</a>
         <a href="contact.html" class="nav-link">Contact</a>
-        <a href="tel:+17570000000" class="text-sm font-medium"><i class="fa-solid fa-phone mr-1"></i> +1 (757) 000-0000</a>
+        <a href="tel:+17574283970" class="text-base font-medium"><i class="fa-solid fa-phone mr-1"></i> +1 (757) 428-3970</a>
         <a href="rooms.html" class="btn btn-gold justify-center">Book Now</a>
       </nav>
     </div>
@@ -65,15 +114,22 @@
   <main>
     <!-- ===================== HERO ===================== -->
     <section class="hero hero-stagger">
-      <img
-        src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600"
-        alt="Ocean27 Hotel oceanfront view in Virginia Beach"
+      <video
         class="hero-media"
-      />
+        poster="images/video/hero-poster.jpg"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+        aria-label="Beachfront at golden hour, Ocean27 Hotel"
+      >
+        <source src="images/video/hero-beach.mp4" type="video/mp4" />
+      </video>
       <div class="hero-overlay"></div>
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-6 w-full pt-32 pb-10">
-        <span class="hero-badge mb-6">⭐⭐ Beachfront &middot; Virginia Beach, VA</span>
+        <span class="hero-badge mb-6"><i class="fa-solid fa-umbrella-beach mr-1"></i> Beachfront &middot; Virginia Beach, VA</span>
         <h1 class="hero-title font-display text-white text-[48px] sm:text-[64px] lg:text-[84px] leading-[1.05] max-w-3xl mb-6">
           Where the Ocean Meets Comfort
         </h1>
@@ -91,8 +147,8 @@
 
     <!-- ===================== BOOKING BAR ===================== -->
     <div class="max-w-5xl mx-auto px-6 relative">
-      <form action="contact.html" method="get" class="booking-bar grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
-        <div class="relative" id="datePickerWrap">
+      <form action="rooms.html#room-list" method="get" class="booking-bar grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
+        <div class="relative field-glow" id="datePickerWrap">
           <label class="field-label">Check-in / Check-out</label>
           <button type="button" id="dateRangeBtn" class="field-input text-left flex items-center justify-between">
             <span id="dateRangeText">Select dates</span>
@@ -102,7 +158,7 @@
           <input type="hidden" id="checkout" name="checkout" required />
           <div id="datePickerCalendar" class="datepicker-pop"></div>
         </div>
-        <div>
+        <div class="field-glow">
           <label class="field-label" for="guests">Guests</label>
           <select class="field-input" id="guests" name="guests">
             <option>1 Guest</option>
@@ -111,7 +167,7 @@
             <option>4 Guests</option>
           </select>
         </div>
-        <div>
+        <div class="field-glow">
           <label class="field-label" for="rooms-count">Rooms</label>
           <select class="field-input" id="rooms-count" name="rooms">
             <option selected>1 Room</option>
@@ -138,17 +194,17 @@
             unbeatable access to everything Virginia Beach has to offer.
           </p>
           <div class="flex flex-wrap gap-4">
-            <span class="pill">🏖️ Beachfront</span>
-            <span class="pill">🚗 Free Parking</span>
-            <span class="pill">🐾 Pet Friendly</span>
+            <span class="pill"><i class="fa-solid fa-umbrella-beach mr-1 text-[var(--gold)]"></i> Beachfront</span>
+            <span class="pill"><i class="fa-solid fa-square-parking mr-1 text-[var(--gold)]"></i> Free Parking</span>
+            <span class="pill"><i class="fa-solid fa-paw mr-1 text-[var(--gold)]"></i> Pet Friendly</span>
           </div>
         </div>
 
         <div class="grid grid-cols-2 gap-5" data-aos="fade-left">
-          <img src="https://picsum.photos/400/300?random=1" alt="Ocean27 Hotel exterior" class="rounded-2xl object-cover w-full h-44 md:h-56" />
-          <img src="https://picsum.photos/400/300?random=2" alt="Ocean27 Hotel room interior" class="rounded-2xl object-cover w-full h-44 md:h-56" />
-          <img src="https://picsum.photos/400/300?random=3" alt="Ocean27 Hotel pool" class="rounded-2xl object-cover w-full h-44 md:h-56" />
-          <img src="https://picsum.photos/400/300?random=4" alt="Ocean27 Hotel beach access" class="rounded-2xl object-cover w-full h-44 md:h-56" />
+          <img src="images/exterior/exterior-1.jpg" alt="Ocean27 Hotel exterior" class="gallery-img cursor-pointer rounded-2xl object-cover w-full h-44 md:h-56" />
+          <img src="images/rooms/two-double-beds-1.jpg" alt="Ocean27 Hotel room interior" class="gallery-img cursor-pointer rounded-2xl object-cover w-full h-44 md:h-56" />
+          <img src="images/pool/pool-1.jpg" alt="Ocean27 Hotel pool" class="gallery-img cursor-pointer rounded-2xl object-cover w-full h-44 md:h-56" />
+          <img src="images/exterior/beach-access.jpg" alt="Ocean27 Hotel lobby" class="gallery-img cursor-pointer rounded-2xl object-cover w-full h-44 md:h-56" />
         </div>
       </div>
     </section>
@@ -166,12 +222,12 @@
           <!-- Room Card 1 -->
           <div class="bezel card-hover" data-aos="fade-up">
             <div class="bezel-inner">
-              <div class="relative">
-                <img src="https://picsum.photos/800/600?random=5" alt="Two Double Beds Oceanfront room" class="w-full h-56 object-cover" />
+              <a href="rooms.html#two-double-beds" class="relative block" aria-label="View Two Double Beds Oceanfront room">
+                <img src="images/rooms/two-double-beds-1.jpg" alt="Two Double Beds Oceanfront room" class="w-full h-56 object-cover" />
                 <span class="absolute top-4 left-4 pill bg-white">Oceanfront View</span>
-              </div>
+              </a>
               <div class="p-6">
-                <h3 class="font-display text-xl text-[var(--blue)] mb-2">Two Double Beds Oceanfront</h3>
+                <h3 class="font-display text-xl text-[var(--blue)] mb-2"><a href="rooms.html#two-double-beds" class="hover:text-[var(--gold)] transition-colors">Two Double Beds Oceanfront</a></h3>
                 <p class="text-base text-gray-600 mb-4">Private balcony with sweeping ocean views, sleeps up to four guests.</p>
                 <div class="flex gap-4 text-gray-500 mb-6">
                   <i class="fa-solid fa-bed" title="Two double beds"></i>
@@ -180,9 +236,8 @@
                   <i class="fa-solid fa-snowflake" title="Air conditioning"></i>
                 </div>
                 <div class="flex gap-3">
-                  <a href="rooms.html" class="btn flex-1 justify-center border border-[var(--blue)] text-[var(--blue)]">View Room</a>
-                  <!-- UPDATE: paste Stripe Payment Link URL in data-stripe-link to enable direct online payment -->
-                  <a href="contact.html#contact-form" data-stripe-link="" data-room="Two Double Beds Oceanfront" class="btn btn-gold flex-1 justify-center book-now-btn">Book Now</a>
+                  <a href="rooms.html#two-double-beds" class="btn flex-1 justify-center border border-[var(--blue)] text-[var(--blue)]">View Room</a>
+                  <a href="rooms.html#two-double-beds" class="btn btn-gold flex-1 justify-center">Book Now</a>
                 </div>
               </div>
             </div>
@@ -191,12 +246,12 @@
           <!-- Room Card 2 -->
           <div class="bezel card-hover" data-aos="fade-up" data-aos-delay="100">
             <div class="bezel-inner">
-              <div class="relative">
-                <img src="https://picsum.photos/800/600?random=6" alt="King Oceanfront room" class="w-full h-56 object-cover" />
+              <a href="rooms.html#king-oceanfront" class="relative block" aria-label="View King Oceanfront Room">
+                <img src="images/rooms/king-oceanfront-1.jpg" alt="King Oceanfront room" class="w-full h-56 object-cover" />
                 <span class="absolute top-4 left-4 pill bg-white">Oceanfront View</span>
-              </div>
+              </a>
               <div class="p-6">
-                <h3 class="font-display text-xl text-[var(--blue)] mb-2">King Oceanfront Room</h3>
+                <h3 class="font-display text-xl text-[var(--blue)] mb-2"><a href="rooms.html#king-oceanfront" class="hover:text-[var(--gold)] transition-colors">King Oceanfront Room</a></h3>
                 <p class="text-base text-gray-600 mb-4">King bed with private balcony and unobstructed ocean view, sleeps two.</p>
                 <div class="flex gap-4 text-gray-500 mb-6">
                   <i class="fa-solid fa-bed" title="King bed"></i>
@@ -205,9 +260,8 @@
                   <i class="fa-solid fa-snowflake" title="Air conditioning"></i>
                 </div>
                 <div class="flex gap-3">
-                  <a href="rooms.html" class="btn flex-1 justify-center border border-[var(--blue)] text-[var(--blue)]">View Room</a>
-                  <!-- UPDATE: paste Stripe Payment Link URL in data-stripe-link to enable direct online payment -->
-                  <a href="contact.html#contact-form" data-stripe-link="" data-room="King Oceanfront Room" class="btn btn-gold flex-1 justify-center book-now-btn">Book Now</a>
+                  <a href="rooms.html#king-oceanfront" class="btn flex-1 justify-center border border-[var(--blue)] text-[var(--blue)]">View Room</a>
+                  <a href="rooms.html#king-oceanfront" class="btn btn-gold flex-1 justify-center">Book Now</a>
                 </div>
               </div>
             </div>
@@ -223,14 +277,14 @@
           <h2 class="font-display text-4xl md:text-6xl text-[var(--blue)] leading-tight">A Closer Look</h2>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="gallery">
-          <img src="https://picsum.photos/600/600?random=41" alt="Ocean27 Hotel gallery photo" class="gallery-img rounded-2xl object-cover w-full h-44 md:h-52 cursor-pointer" data-aos="zoom-in" data-aos-delay="0" />
-          <img src="https://picsum.photos/600/600?random=42" alt="Ocean27 Hotel gallery photo" class="gallery-img rounded-2xl object-cover w-full h-44 md:h-52 cursor-pointer" data-aos="zoom-in" data-aos-delay="50" />
-          <img src="https://picsum.photos/600/600?random=43" alt="Ocean27 Hotel gallery photo" class="gallery-img rounded-2xl object-cover w-full h-44 md:h-52 cursor-pointer" data-aos="zoom-in" data-aos-delay="100" />
-          <img src="https://picsum.photos/600/600?random=44" alt="Ocean27 Hotel gallery photo" class="gallery-img rounded-2xl object-cover w-full h-44 md:h-52 cursor-pointer" data-aos="zoom-in" data-aos-delay="150" />
-          <img src="https://picsum.photos/600/600?random=45" alt="Ocean27 Hotel gallery photo" class="gallery-img rounded-2xl object-cover w-full h-44 md:h-52 cursor-pointer" data-aos="zoom-in" data-aos-delay="200" />
-          <img src="https://picsum.photos/600/600?random=46" alt="Ocean27 Hotel gallery photo" class="gallery-img rounded-2xl object-cover w-full h-44 md:h-52 cursor-pointer" data-aos="zoom-in" data-aos-delay="250" />
-          <img src="https://picsum.photos/600/600?random=47" alt="Ocean27 Hotel gallery photo" class="gallery-img rounded-2xl object-cover w-full h-44 md:h-52 cursor-pointer" data-aos="zoom-in" data-aos-delay="300" />
-          <img src="https://picsum.photos/600/600?random=48" alt="Ocean27 Hotel gallery photo" class="gallery-img rounded-2xl object-cover w-full h-44 md:h-52 cursor-pointer" data-aos="zoom-in" data-aos-delay="350" />
+          <img src="images/gallery/gallery-1.jpg" alt="Ocean27 Hotel gallery photo" class="gallery-img rounded-2xl object-cover w-full h-44 md:h-52 cursor-pointer" data-aos="zoom-in" data-aos-delay="0" />
+          <img src="images/gallery/gallery-2.jpg" alt="Ocean27 Hotel gallery photo" class="gallery-img rounded-2xl object-cover w-full h-44 md:h-52 cursor-pointer" data-aos="zoom-in" data-aos-delay="50" />
+          <img src="images/balcony/balcony-1.jpg" alt="Ocean27 Hotel gallery photo" class="gallery-img rounded-2xl object-cover w-full h-44 md:h-52 cursor-pointer" data-aos="zoom-in" data-aos-delay="100" />
+          <img src="images/rooms/two-double-beds-2.jpg" alt="Ocean27 Hotel gallery photo" class="gallery-img rounded-2xl object-cover w-full h-44 md:h-52 cursor-pointer" data-aos="zoom-in" data-aos-delay="150" />
+          <img src="images/gallery/gallery-3.jpg" alt="Ocean27 Hotel gallery photo" class="gallery-img rounded-2xl object-cover w-full h-44 md:h-52 cursor-pointer" data-aos="zoom-in" data-aos-delay="200" />
+          <img src="images/ocean-view/ocean-view-1.jpg" alt="Ocean27 Hotel gallery photo" class="gallery-img rounded-2xl object-cover w-full h-44 md:h-52 cursor-pointer" data-aos="zoom-in" data-aos-delay="250" />
+          <img src="images/exterior/exterior-1.jpg" alt="Ocean27 Hotel gallery photo" class="gallery-img rounded-2xl object-cover w-full h-44 md:h-52 cursor-pointer" data-aos="zoom-in" data-aos-delay="300" />
+          <img src="images/gallery/gallery-4.jpg" alt="Ocean27 Hotel gallery photo" class="gallery-img rounded-2xl object-cover w-full h-44 md:h-52 cursor-pointer" data-aos="zoom-in" data-aos-delay="350" />
         </div>
       </div>
     </section>
@@ -274,22 +328,22 @@
           <div data-aos="fade-up">
             <h3 class="font-display text-xl text-[var(--blue)] mb-5">Top Sights</h3>
             <ul class="space-y-3 text-xl text-gray-600">
-              <li class="flex justify-between border-b border-black/5 pb-3"><span>Neptune's Park</span><span class="text-gray-400">250 m</span></li>
-              <li class="flex justify-between border-b border-black/5 pb-3"><span>King Neptune Statue</span><span class="text-gray-400">350 m</span></li>
-              <li class="flex justify-between border-b border-black/5 pb-3"><span>Neptune's Park (East)</span><span class="text-gray-400">400 m</span></li>
-              <li class="flex justify-between border-b border-black/5 pb-3"><span>VA Beach Surf &amp; Rescue Museum</span><span class="text-gray-400">550 m</span></li>
-              <li class="flex justify-between border-b border-black/5 pb-3"><span>Beach Garden District Park</span><span class="text-gray-400">800 m</span></li>
-              <li class="flex justify-between border-b border-black/5 pb-3"><span>VA Beach Fishing Pier</span><span class="text-gray-400">1.6 km</span></li>
-              <li class="flex justify-between"><span>VA Museum of Contemporary Art</span><span class="text-gray-400">1.8 km</span></li>
+              <li class="flex justify-between border-b border-black/5 pb-3"><span>Neptune's Park</span><span class="text-gray-500">250 m</span></li>
+              <li class="flex justify-between border-b border-black/5 pb-3"><span>King Neptune Statue</span><span class="text-gray-500">350 m</span></li>
+              <li class="flex justify-between border-b border-black/5 pb-3"><span>Neptune's Park (East)</span><span class="text-gray-500">400 m</span></li>
+              <li class="flex justify-between border-b border-black/5 pb-3"><span>VA Beach Surf &amp; Rescue Museum</span><span class="text-gray-500">550 m</span></li>
+              <li class="flex justify-between border-b border-black/5 pb-3"><span>Beach Garden District Park</span><span class="text-gray-500">800 m</span></li>
+              <li class="flex justify-between border-b border-black/5 pb-3"><span>VA Beach Fishing Pier</span><span class="text-gray-500">1.6 km</span></li>
+              <li class="flex justify-between"><span>VA Museum of Contemporary Art</span><span class="text-gray-500">1.8 km</span></li>
             </ul>
           </div>
 
           <div data-aos="fade-up" data-aos-delay="100">
             <h3 class="font-display text-xl text-[var(--blue)] mb-5">Restaurants</h3>
             <ul class="space-y-3 text-xl text-gray-600">
-              <li class="flex justify-between border-b border-black/5 pb-3"><span>Sweet Frog Frozen Yogurt</span><span class="text-gray-400">100 m</span></li>
-              <li class="flex justify-between border-b border-black/5 pb-3"><span>H Bar</span><span class="text-gray-400">150 m</span></li>
-              <li class="flex justify-between"><span>Cactus Jack's</span><span class="text-gray-400">150 m</span></li>
+              <li class="flex justify-between border-b border-black/5 pb-3"><span>Sweet Frog Frozen Yogurt</span><span class="text-gray-500">100 m</span></li>
+              <li class="flex justify-between border-b border-black/5 pb-3"><span>H Bar</span><span class="text-gray-500">150 m</span></li>
+              <li class="flex justify-between"><span>Cactus Jack's</span><span class="text-gray-500">150 m</span></li>
             </ul>
           </div>
         </div>
@@ -298,18 +352,18 @@
           <div data-aos="fade-up">
             <h3 class="font-display text-xl text-[var(--blue)] mb-5">Top Attractions</h3>
             <ul class="space-y-3 text-xl text-gray-600">
-              <li class="flex justify-between border-b border-black/5 pb-3"><span>John Wareing Monument</span><span class="text-gray-400">2.8 km</span></li>
-              <li class="flex justify-between border-b border-black/5 pb-3"><span>Cape Henry Lighthouse</span><span class="text-gray-400">8 km</span></li>
-              <li class="flex justify-between border-b border-black/5 pb-3"><span>Naval Air Station Oceana</span><span class="text-gray-400">9 km</span></li>
-              <li class="flex justify-between"><span>Mount Trashmore Park</span><span class="text-gray-400">15 km</span></li>
+              <li class="flex justify-between border-b border-black/5 pb-3"><span>John Wareing Monument</span><span class="text-gray-500">2.8 km</span></li>
+              <li class="flex justify-between border-b border-black/5 pb-3"><span>Cape Henry Lighthouse</span><span class="text-gray-500">8 km</span></li>
+              <li class="flex justify-between border-b border-black/5 pb-3"><span>Naval Air Station Oceana</span><span class="text-gray-500">9 km</span></li>
+              <li class="flex justify-between"><span>Mount Trashmore Park</span><span class="text-gray-500">15 km</span></li>
             </ul>
           </div>
 
           <div data-aos="fade-up" data-aos-delay="100">
             <h3 class="font-display text-xl text-[var(--blue)] mb-5">Airports</h3>
             <ul class="space-y-3 text-xl text-gray-600">
-              <li class="flex justify-between border-b border-black/5 pb-3"><span>Norfolk International</span><span class="text-gray-400">23 km</span></li>
-              <li class="flex justify-between"><span>Newport News/Williamsburg</span><span class="text-gray-400">67 km</span></li>
+              <li class="flex justify-between border-b border-black/5 pb-3"><span>Norfolk International</span><span class="text-gray-500">23 km</span></li>
+              <li class="flex justify-between"><span>Newport News/Williamsburg</span><span class="text-gray-500">67 km</span></li>
             </ul>
           </div>
         </div>
@@ -336,36 +390,36 @@
           <div class="review-card" data-aos="fade-up">
             <i class="fa-solid fa-quote-left review-quote-icon"></i>
             <div class="text-[var(--gold)] mb-4 text-sm">★★★★★</div>
-            <p class="text-gray-600 text-base leading-relaxed mb-6">"Perfect beachfront location, steps from the ocean! We watched the sunrise from our balcony every morning."</p>
+            <p class="text-gray-600 text-lg leading-relaxed mb-6">"Perfect beachfront location, steps from the ocean! We watched the sunrise from our balcony every morning."</p>
             <div class="review-author">
               <span class="review-avatar">M</span>
               <div>
                 <p class="text-sm font-semibold text-[var(--blue)]">Margaret H.</p>
-                <p class="text-base text-gray-400">Stayed May 2025 &middot; Richmond, VA</p>
+                <p class="text-base text-gray-500">Stayed May 2025 &middot; Richmond, VA</p>
               </div>
             </div>
           </div>
           <div class="review-card" data-aos="fade-up" data-aos-delay="100">
             <i class="fa-solid fa-quote-left review-quote-icon"></i>
             <div class="text-[var(--gold)] mb-4 text-sm">★★★★</div>
-            <p class="text-gray-600 text-base leading-relaxed mb-6">"Great value. Clean rooms, friendly staff, and close to everything on the boardwalk."</p>
+            <p class="text-gray-600 text-lg leading-relaxed mb-6">"Great value. Clean rooms, friendly staff, and close to everything on the boardwalk."</p>
             <div class="review-author">
               <span class="review-avatar">D</span>
               <div>
                 <p class="text-sm font-semibold text-[var(--blue)]">David R.</p>
-                <p class="text-base text-gray-400">Stayed April 2025 &middot; Raleigh, NC</p>
+                <p class="text-base text-gray-500">Stayed April 2025 &middot; Raleigh, NC</p>
               </div>
             </div>
           </div>
           <div class="review-card" data-aos="fade-up" data-aos-delay="200">
             <i class="fa-solid fa-quote-left review-quote-icon"></i>
             <div class="text-[var(--gold)] mb-4 text-sm">★★★★★</div>
-            <p class="text-gray-600 text-base leading-relaxed mb-6">"Loved the balcony view. Will definitely come back! Best oceanfront stay we've had in years."</p>
+            <p class="text-gray-600 text-lg leading-relaxed mb-6">"Loved the balcony view. Will definitely come back! Best oceanfront stay we've had in years."</p>
             <div class="review-author">
               <span class="review-avatar">C</span>
               <div>
                 <p class="text-sm font-semibold text-[var(--blue)]">Connor M.</p>
-                <p class="text-base text-gray-400">Stayed June 2025 &middot; Charlotte, NC</p>
+                <p class="text-base text-gray-500">Stayed June 2025 &middot; Charlotte, NC</p>
               </div>
             </div>
           </div>
@@ -405,10 +459,30 @@
           <div class="bezel">
             <div class="bezel-inner p-6">
               <i class="fa-solid fa-phone text-[var(--gold)] text-xl mb-3"></i>
-              <p class="text-base text-gray-600">+1 (757) 000-0000 <!-- UPDATE --></p>
+              <p class="text-base text-gray-600">+1 (757) 428-3970 <!-- UPDATE --></p>
             </div>
           </div>
         </div>
+
+        <div class="text-center max-w-2xl mx-auto mt-16 mb-8" data-aos="fade-up">
+          <h2 class="font-display text-4xl md:text-5xl text-[var(--blue)] leading-tight mb-4">Have a Question?</h2>
+          <p class="text-lg text-gray-600">Send us a message and our team will get back to you shortly.</p>
+        </div>
+        <div id="contact-form" class="bezel max-w-4xl mx-auto" data-aos="fade-up">
+          <div class="bezel-inner p-2 sm:p-4">
+            <iframe data-tally-src="https://tally.so/embed/GxkYXe?alignLeft=1&hideTitle=1&transparentBackground=1"
+              loading="lazy" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0"
+              title="Ocean27 Hotel booking enquiry form"></iframe>
+          </div>
+        </div>
+        <script>
+          var d = document, w = "https://tally.so/widgets/embed.js", v = function () {
+            "undefined" != typeof Tally ? Tally.loadEmbeds() : d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function (e) { e.src = e.dataset.tallySrc; });
+          };
+          if ("undefined" != typeof Tally) v(); else if (d.querySelector('script[src="' + w + '"]') == null) {
+            var s = d.createElement("script"); s.src = w; s.onload = v; s.onerror = v; d.body.appendChild(s);
+          } else v();
+        </script>
       </div>
     </section>
   </main>
@@ -417,7 +491,7 @@
   <footer class="footer">
     <div class="max-w-[1600px] mx-auto px-6 py-16 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
       <div>
-        <p class="font-display text-xl text-white mb-3">🌊 Ocean27 Hotel</p>
+        <p class="font-display text-xl text-white mb-3 flex items-center gap-2"><img src="images/logo-icon.png" alt="Ocean27 Hotel logo" class="h-8 w-auto"/> Ocean27 Hotel</p>
         <p class="text-base text-white/70 leading-relaxed">Your Oceanfront Escape in Virginia Beach</p>
       </div>
 
@@ -435,9 +509,9 @@
       <div>
         <h4 class="text-white font-semibold text-base uppercase tracking-wide mb-4">Contact</h4>
         <ul class="space-y-2 text-base">
-          <li>📍 2707 Atlantic Ave, VA 23451</li>
-          <li>📞 +1 (757) 000-0000 <!-- UPDATE --></li>
-          <li>✉️ info@ocean27hotel.com <!-- UPDATE --></li>
+          <li><i class="fa-solid fa-location-dot text-[var(--gold)] mr-1"></i> 2707 Atlantic Ave, VA 23451</li>
+          <li><i class="fa-solid fa-phone text-[var(--gold)] mr-1"></i> +1 (757) 428-3970 <!-- UPDATE --></li>
+          <li><i class="fa-solid fa-envelope text-[var(--gold)] mr-1"></i> Ocean27virginiabeach@gmail.com <!-- UPDATE --></li>
         </ul>
       </div>
 
@@ -460,6 +534,6 @@
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=5"></script>
 </body>
 </html>
